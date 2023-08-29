@@ -45,15 +45,25 @@ class BMIWidget extends State<BmiWidget>{
               width: double.infinity,
               padding: EdgeInsets.all(32),
               child:Column(
+                mainAxisAlignment: MainAxisAlignment.start,
                   children: [
                     Image.network("https://img.freepik.com/premium-vector/calculator-with-modern-flat-style_3322-74.jpg"),
+                   SizedBox(height: 20),
                     Text("BMI Calculator", style: TextStyle(color: Colors.red[700], fontSize: 34, fontWeight: FontWeight.w700),),
                     Text("We care about your health", style: TextStyle(color: Colors.grey, fontSize: 15, fontWeight: FontWeight.w400),),
                     SizedBox(
                       height: 32,
                     ),
                     // Convert the double to a string with 2 decimal places
-                    Text("Height ${_height.toStringAsFixed(2)} (cm)", style: TextStyle(color: Colors.grey, fontSize: 24, fontWeight: FontWeight.w400),),
+
+                   Row(
+                       mainAxisAlignment: MainAxisAlignment.center,
+                     children: [
+                       Text("Height ${_height.toStringAsFixed(2)}", style: TextStyle(color: Colors.grey, fontSize: 24, fontWeight: FontWeight.w400),),
+                       Text("(cm)", style: TextStyle(color: Colors.red, fontSize: 30, fontWeight: FontWeight.w400),),
+
+                     ],
+                   ),
                     Container(
                         padding:EdgeInsets.only(left:16,right:16),
                         child:Slider(
@@ -105,7 +115,7 @@ class BMIWidget extends State<BmiWidget>{
                               });
                             }
                             ,label:Text("Calculate"),
-                            icon:Icon(Icons.favorite, color: Colors.white),
+                            icon:Icon(Icons.favorite, color: Colors.red),
                         )
                     )
 

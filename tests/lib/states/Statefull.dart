@@ -75,21 +75,17 @@ class _MyStatefulPageState extends State<MyStatefulPage> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Stateful Example'),
-      ),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          Text(label),
-          ElevatedButton(
-            onPressed: changeLabel,
-            child: Text('Change Label'),
+    return Container(
+          child: Column(
+            children: [
+              Text(label),
+              ElevatedButton(
+                onPressed: changeLabel,
+                child: Text('Change Label'),
+              ),
+            ],
           ),
-        ],
-      ),
+
     );
   }
 }

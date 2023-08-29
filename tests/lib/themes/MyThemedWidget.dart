@@ -15,7 +15,7 @@ class MyThemedWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: isDarkMode ? ThemeData.dark() : ThemeData.light(),
-      home: MyWidget(),
+      home: ThemedApp(),
     );
   }
 }
@@ -30,9 +30,12 @@ class _ThemedAppState extends State<ThemedApp> {
   bool _isDarkMode = false;
 
   void _toggleTheme() {
+    //
     setState(() {
-      _isDarkMode = !_isDarkMode;
+
     });
+    _isDarkMode = !_isDarkMode;
+
   }
 
   @override

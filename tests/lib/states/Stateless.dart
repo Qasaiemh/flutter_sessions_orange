@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'Statefull.dart';
+
 //This function triggers the build process
 void main() => runApp(const MyApp());
 
@@ -28,6 +30,7 @@ class MyApp extends StatelessWidget {
                 style: TextStyle(color: Colors.black, fontSize: 30),
               ),
             ),
+            MyStatefulPage()
           ],
         ), // Container
       ), // Scaffold
